@@ -1,0 +1,10 @@
+-
+    name: 'Execute two commands on web_node1'
+    hosts: boston_nodes
+    tasks:
+        -
+            name: 'Execute a date command'
+            command: date
+        -
+            name: 'Execute a command to display hosts file'
+            command: 'cat /etc/hosts'
