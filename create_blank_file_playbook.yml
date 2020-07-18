@@ -1,0 +1,37 @@
+- 
+  name: 'creating a file /opt/nfsdata.txt on webserver1'
+  hosts: stapp01
+  become: true
+  tasks:
+    - name: Ansible file module to create new file with permissions.
+      file:
+        path: /opt/nfsdata.txt
+        state: touch
+        owner: abc
+        group: password
+        mode: '0744'
+- 
+  name: 'create a file /opt/nfsdata.txt on webserver2'
+  hosts: stapp02
+  become: true
+  tasks:
+    - name: Ansible file module to create new file with permissions.
+      file:
+        path: /opt/nfsdata.txt
+        state: touch
+        owner: abc
+        group: password
+        mode: '0744'
+
+- 
+  name: 'create a file /opt/nfsdata.txt on webserver3'
+  hosts: stapp03
+  become: true
+  tasks:
+    - name: Ansible file module to create new file with permissions.
+      file:
+        path: /opt/nfsdata.txt
+        state: touch
+        owner: abc
+        group: password
+        mode: '0744'
