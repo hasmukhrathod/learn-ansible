@@ -1,0 +1,27 @@
+- hosts: all
+  become: true
+  tasks:
+  - name: Copy index.html from local to remote
+    copy:
+      src: /usr/src/data/index.html
+      dest: /opt/data  
+      owner: abc
+      group: password
+      mode: '0755'
+    when: ansible_nodename == 'web1' 
+  - name: Copy index.html from local to remote
+    copy:
+      src: /usr/src/data/index.html
+      dest: /opt/data
+      owner: abc
+      group: password
+      mode: '0755'
+    when: ansible_nodename == 'web2'
+  - name: Copy index.html from local to remote
+    copy:
+      src: /usr/src/data/index.html
+      dest: /opt/data
+      owner: abc
+      group: password
+      mode: '0755'
+    when: ansible_nodename == 'web3'

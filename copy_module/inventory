@@ -1,0 +1,3 @@
+web1		ansible_host=IpAddress ansible_connection=ssh ansible_user=abc ansible_ssh_pass=password
+web2		ansible_host=IpAddress ansible_connection=ssh ansible_user=abc ansible_ssh_pass=password
+web3		ansible_host=IpAddress ansible_connection=ssh ansible_user=abc ansible_ssh_pass=password
